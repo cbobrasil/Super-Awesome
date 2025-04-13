@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: superhero
+    database: superawesome_dbt
+    schema: main
+    tables:
+      - name: comic_characters_info
+      - name: dc_data
+      - name: marvel_data
+      - name: hero_abilities

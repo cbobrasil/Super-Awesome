@@ -1,0 +1,43 @@
+
+version: 2
+
+models:
+  - name: fact_heros
+    description: fact table 
+    columns:
+      - name: caracther_appearances_key
+        tests: [not_null, unique]
+      - name: caracther_key
+        tests: [not_null, unique]
+      - name: publisher_key
+        tests: [not_null, unique]
+      - name: appearances
+      - name: overall_score
+      - name: superpowers
+      - name: created_at
+
+  - name: dim_carachteristic
+    description: dimension mapping characteristics of the 
+    columns:
+      - name: caracther_key
+      - name: page_id
+      - name: publisher
+      - name: character_name
+      - name: eye
+      - name: hair
+      - name: gender
+      - name: race
+      - name: skin_color
+      - name: height
+      - name: weight
+      - name: gsm
+      - name: alive
+      - name: first_appearance
+      - name: year
+      - name: alignment
+
+  - name: dim_publisher
+    description: dimension mapping publishers
+    columns:
+      - name: publisher_key
+      - name: publisher

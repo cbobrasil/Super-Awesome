@@ -1,0 +1,40 @@
+
+version: 2
+
+models:
+  - name: stg_comic_characters_info
+    description: staging table for comic character attributes
+    columns:
+      - name: name
+        tests: [not_null]
+      - name: alignment
+      - name: gender
+      - name: eyecolor
+      - name: race
+      - name: haircolor
+      - name: publisher
+      - name: skincolor
+      - name: height
+      - name: weight
+
+  - name: stg_dc_data
+    description: staging table with dc characters and appearances
+    columns:
+      - name: name
+        tests: [not_null]
+      - name: total_appearances
+
+  - name: stg_marvel_data
+    description: staging table with marvel characters and appearances
+    columns:
+      - name: name
+        tests: [not_null]
+      - name: total_appearances
+
+  - name: stg_hero_abilities
+    description: staging table linking characters to superpowers
+    columns:
+      - name: name
+        tests: [not_null]
+      - name: superpower
+

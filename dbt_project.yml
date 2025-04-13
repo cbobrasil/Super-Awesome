@@ -1,0 +1,24 @@
+name: 'superawesome_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'superawesome_dbt'
+
+seed-paths: ["data"]
+test-paths: ["tests"]
+docs-paths: ["docs"]
+
+models:
+  superawesome_dbt:
+    +materialized: table
+
+    staging:
+      +schema: staging
+      +materialized: table
+
+    marts:
+      +schema: marts
+      +materialized: table
+
+seeds:
+    +database: superawesome_dbt

@@ -1,0 +1,64 @@
+
+version: 2
+
+models:
+  - name: prs_01_top_10_villains_appearances_by_publisher
+    description: Top 10 villains by appearance per publisher
+    columns:
+      - name: caracther_key
+      - name: character_name
+      - name: publisher
+      - name: appearances
+      - name: alignment
+
+  - name: prs_02_top_10_hereos_appearances_by_publisher
+    description: Top 10 heroes by appearance per publisher
+    columns:
+      - name: caracther_key
+      - name: character_name
+      - name: publisher
+      - name: appearances
+      - name: alignment  
+
+  - name: prs_03_bottom_10_villains_appearances_by_publisher
+    description: Bottom 10 villains by appearance per publisher
+    columns:
+      - name: caracther_key
+      - name: character_name
+      - name: alignment
+      - name: publisher
+      - name: appearances
+
+  - name: prs_04_bottom_10_hereos_appearances_by_publisher
+    description: Bottom 10 heroes by appearance per publisher 
+    columns:
+      - name: caracther_key
+      - name: character_name
+      - name: alignment
+      - name: publisher
+      - name: appearances
+      
+  - name: prs_05_top_10_superpowers_by_publisher
+    description: Top 10 most common superpowers by creator 
+    columns:
+      - name: publisher
+      - name: superpower
+      
+  - name: prs_06_re_rank_top10_villains_and_heros_overall_score
+    description: Re-ranking of the top 10 villains and heroes based on an overall score
+    columns:
+      - name: character_name
+      - name: alignment
+      
+  - name: prs_07_top_5_common_superpowers
+    description: The 5 most common superpowers
+    columns:
+      - name: superpower
+      
+  - name: prs_08_hereos_villans_with_top_5_common_superpowers
+    description: Identification of the hero and villain associated with each of these 5 superpowers
+    columns:
+      - name: caracther_key
+      - name: superpower
+
+      
